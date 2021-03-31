@@ -1,0 +1,21 @@
+{
+  "name": "todobe",
+  "version": "1.0.0",
+  "description": "backend for todo app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "helmet": "^3.20.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.4",
+    "pgtools": "^0.3.0",
+    "sequelize": "^6.3.5"
+  }
+}
