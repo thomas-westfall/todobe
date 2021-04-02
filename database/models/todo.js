@@ -2,13 +2,14 @@ const Sequelize = require('sequelize');
 const db = require('../db');
 
 const Todo = db.define("todo", {
-  name: {
+  content: {
     type: Sequelize.STRING,
     allowNull: false
   },
 
-  description: {
-    type: Sequelize.STRING,
+  status: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false
   },
 
 });

@@ -89,7 +89,7 @@ router.delete('/:id', function(req, res, next) {
       }
       else {
         todo.destroy();
-        res.status(200);
+        res.status(200).send('Todo deleted');
       }
       })
       .catch(next)

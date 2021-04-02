@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const helmet = require('helmet');
 const compression = require('compression');
+const cors = require('cors');
 
 // Utilities;
 const createLocalDatabase = require('./utilities/createLocalDatabase');
@@ -45,7 +46,8 @@ const configureApp = () => {
   app.use(express.urlencoded({ extended: false }));
   app.use(compression());
   app.use(cookieParser());
-
+  app.use(cors({origin: 'http://localhost:3000'}));
+  
   // Mount our apiRouter;
   app.use('/api', apiRouter);
 
